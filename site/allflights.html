@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>All flights</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="navDrawer">
+    <div id="accountImg">
+      <div id="nameAndEmail">
+        <div id="name">
+          <h3>Adam Ohlsson</p>
+          <p>adam.olsson@itggot.se</p>
+        </div>
+        <div id="accountArrow">
+          <i class="material-icons">arrow_drop_down</i>
+        </div>
+      </div>
+    </div>
+    <div class="navSections">
+      <div class="navLabels">
+        <i class="material-icons">flight</i>
+        <h2>All flights</h2>
+      </div>
+    </div>
+    <hr>
+    <div class="navSections">
+      <div class="navLabels">
+        <i class="material-icons">flight_takeoff</i>
+        <h2>Departures</h2>
+      </div>
+      <div class="navLabels">
+        <i class="material-icons">flight_land</i>
+        <h2>Arrivals</h2>
+      </div>
+      <div class="navLabels">
+        <i class="material-icons">place</i>
+        <h2>Airports</h2>
+      </div>
+    </div>
+    <hr>
+    <div class="navSections">
+      <div class="navLabels">
+        <i class="material-icons">history</i>
+        <h2>History</h2>
+      </div>
+      <div class="navLabels">
+        <i class="material-icons">star</i>
+        <h2>Starred</h2>
+      </div>
+    </div>
+    <hr>
+    <div class="navSections">
+      <div class="navLabels">
+        <i class="material-icons">settings</i>
+        <h2>Settings</h2>
+      </div>
+      <div class="navLabels">
+        <i class="material-icons">help</i>
+        <h2>Help &amp; feedback</h2>
+      </div>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="appBar fixedAppbar">
+      <div id="appBarMenuIcon">
+        <a href="index.html"><i class="material-icons">arrow_back</i></a>
+        <h1>All flights</h1>
+      </div>
+      <div id="appBarActions">
+        <i class="material-icons" id="search">search</i>
+        <i class="material-icons appBarMic">mic</i>
+      </div>
+    </div>
+
+    <div id="list">
+      <div id="subHeader">
+        <h1>Today</h1>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Gothenburg - Partille</h1>
+          <p>6:00 am Price: 10$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons" id="starred" onclick="starred()">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Gothenburg - Mölndal</h1>
+          <p>6:30 am Price: 10$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Partille - Mölndal</h1>
+          <p>6:45 am Price: 10$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Mölnlycke - Gothenburg</h1>
+          <p>7:00 am Price: 12.5$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Gothenburg - Särö</h1>
+          <p>7:15 am Price: 15$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Surte - Lindome</h1>
+          <p>7:30 am Price: 17.5$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Särö - Partille</h1>
+          <p>8:00 am Price: 15$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Gothenburg - Partille</h1>
+          <p>8:10 am Price: 10$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Partille - Lindome</h1>
+          <p>8:30 am Price: 10$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Mölndal - Gothenburg</h1>
+          <p>8:50 am Price: 10$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+      <div class="listLabels">
+        <div class="labelText">
+          <h1>Surte - Angered</h1>
+          <p>9:15 am Price: 7.5$</p>
+        </div>
+        <div class="labelIcon">
+          <i class="material-icons">star_border</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>

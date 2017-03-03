@@ -1,0 +1,510 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+.navDrawer {
+  width: calc(100vw - 56px);
+  max-width: 280px;
+  height: 100vh;
+  background-color: white;
+  transform: translateX(-304px);
+  --shadow-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 16px var(--shadow-color);
+  position: fixed;
+  z-index: 4;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(1, 0, 1,0);
+  overflow: hidden;
+  overflow-y: auto;
+  top: 0px;
+}
+
+#accountImg {
+  width: 304px;
+  height: 170px;
+  background-image: url(../img/md.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+#nameAndEmail {
+  width: 304px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 16px;
+}
+
+#name {
+  margin-left: 16px;
+}
+
+#nameAndEmail h3 {
+  font-size: 14px;
+  font-family: 'Roboto:500', sans-serif;
+  color: white;
+  margin: 0;
+}
+
+#nameAndEmail p {
+  font-size: 14px;
+  font-family: 'Roboto:400', sans-serif;
+  color: white;
+  margin: 0;
+}
+
+#nameAndEmail i {
+  font-size: 24px;
+  color: white;
+  margin-right: 16px;
+}
+
+.navSections {
+  width: calc(100vw - 56px);
+  max-width: 280;
+  background-color: white;
+  margin: 8px 0px 8px 0px;
+}
+
+.navLabels {
+  height: 48px;
+  width: calc(100vw - 56px);
+  max-width: 280px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navLabels i {
+  font-size: 24px;
+  color: black;
+  opacity: 0.54;
+  margin-left: 16px;
+}
+
+.navLabels h2 {
+  margin: 0;
+  font-family: 'Roboto:500', sans-serif;
+  font-size: 14px;
+  color: black;
+  opacity: 0.87;
+  margin-left: 40px;
+}
+
+.scrim {
+  width: 360px;
+  height: 640px;
+  opacity: 0;
+  background-color: rgba(000, 0, 0, 0.50);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+#container {
+  width: 360px;
+  height: 100%;
+}
+
+#mapContainer {
+  width: 100vw;
+  height: calc(100vh - 56px);
+}
+
+.appBar {
+  height: 56px;
+  width: 100vw;
+  background-color: #FF9800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 20px rgba(000, 0, 0, 0.2);
+}
+
+.appBarSearch {
+  display: none;
+}
+
+.fixedAppbar {
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+}
+
+.mapBar {
+  position: absolute;
+  width: 360px;
+  top: 0px;
+  z-index: 1;
+}
+
+.appBar i {
+  font-size: 24px;
+  color: white;
+}
+
+.appBar h1 {
+  font-family: 'Roboto:500', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 32px;
+  color: white;
+}
+
+#appBarMenuIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.appBarMic {
+  margin-right: 16px;
+}
+
+#appBarActions {
+  display: flex;
+}
+
+#appBarActions #search {
+  margin-right: 16px;
+}
+
+#map {
+  width: 360px;
+  height: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 56px;
+}
+
+.FAB {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0px 6px 6px rgba(000, 0, 0, 0.2);
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+}
+
+#FABcenter {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(56px + 16px);
+}
+
+#FABcenter i {
+  font-size: 24px;
+  color: black;
+  opacity: 0.54;
+}
+
+#FABflights i {
+  font-size: 24px;
+  color: white;
+}
+
+#FABflights {
+  background-color: #FF9800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ALL FLIGHTS */
+
+#list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+}
+
+#subHeader {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+#subHeader h1 {
+  margin-left: 16px;
+  color: black;
+  opacity: 0.54;
+  font-size: 16px;
+  font-family: 'Roboto:400', sans-serif;
+}
+
+.listLabels {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.labelText {
+  padding-left: 16px;
+}
+
+.labelText h1 {
+  font-size: 16px;
+  font-family: 'Roboto:400', sans-serif;
+  margin: 0;
+  color: black;
+  font-weight: 400;
+}
+
+.labelText p {
+  font-size: 14px;
+  font-family: 'Roboto:400', sans-serif;
+  margin: 0;
+  color: black;
+  opacity: 0.54;
+}
+
+.labelIcon {
+  margin-right: 16px;
+}
+
+.labelIcon .labelIconStarred {
+  color: #FFEB3B;
+}
+
+.labelIcon i {
+  font-size: 24px;
+  opacity: 0.54;
+}
+
+#settingsLabels {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+}
+
+#settingsLabels h1 {
+  font-size: 16px;
+  color: black;
+  margin: 0;
+  font-weight: 400;
+}
+
+#settingsLabels p {
+  font-size: 14px;
+  color: black;
+  opacity: 0.54;
+  margin: 0;
+}
+
+.threeLineTile {
+  height: 88px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 16px 0px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.singleLineTile {
+  height: 48px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.twoLineTile {
+  height: 72px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+  border-bottom: 1px solid rgba(000, 0, 0, 0.16);
+}
+
+#airports {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin-top: 56px;
+}
+
+#card1 {
+  margin-top: 16px;
+}
+
+.cards {
+  height: 322px;
+  width: 344px;
+  background-color: white;
+  margin-bottom: 16px;
+  box-shadow: 0px 2px 10px rgba(000, 0, 0, 0.2);
+}
+
+.cardTitles {
+  margin: 24px 8px 16px 8px;
+}
+
+.cardTitles h1 {
+  font-size: 24px;
+  color: black;
+  margin: 0;
+  font-weight: 400;
+}
+
+.cardTitles h2{
+  font-size: 14px;
+  color: black;
+  opacity: 0.54;
+  margin: 0;
+}
+
+.actions {
+  width: 64px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+}
+
+.actions h1 {
+  font-size: 14px;
+  color: #FF9800;
+  margin: 8px;
+}
+
+.searchInput {
+  margin-top: -56px;
+  position: absolute;
+  height: 56px;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+.searchInput i {
+  opacity: 0.54;
+}
+
+#backArrow {
+  margin-left: 16px;
+}
+
+#close {
+  margin-right: 16px;
+}
+
+#pac-input {
+  width: calc(100vw - 144px);
+  border: none;
+  font-size: 16px;
+  font-family: 'Roboto:400', sans-serif;
+}
+
+::-webkit-input-placeholder {
+  font-size: 16px;
+  font-family: 'Roboto:400', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+.pac-inputShow {
+  z-index: 5;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+@media screen and (min-width: 361px) {
+  #mapContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  #map {
+    width: 100vw;
+    height: calc(100vh - 48px);
+    margin-top: 48px;
+  }
+
+  .navDrawer {
+    height: 100vh;
+  }
+
+  .scrimShow {
+    display: none
+  }
+
+  .scrim {
+    height: 100vh;
+  }
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .appBar {
+    height: 48px;
+    width: 100vw;
+  }
+
+  #settingsLabels {
+    margin-top: 48px;
+  }
+
+  #airports {
+    margin-top: 48px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 100vw;
+  }
+
+  #card1 {
+    margin-top: 16px;
+  }
+
+  .cards {
+    margin: 16px 0px 16px 16px;
+    box-shadow: 0px 0px 0px;
+  }
+}
+
+/* JAVASCRIpx KLASSER */
+
+.navDrawerOpen {
+  transform: translateX(0);
+  --shadow-color: rgba(0, 0, 0, 0.26);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0, 1, 0,1);
+}
+
+.scrimShow {
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google flights</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="navDrawer">
+      <div id="accountImg">
+        <div id="nameAndEmail">
+          <div id="name">
+            <h3>Adam Ohlsson</p>
+            <p>adam.olsson@itggot.se</p>
+          </div>
+          <div id="accountArrow">
+            <i class="material-icons">arrow_drop_down</i>
+          </div>
+        </div>
+      </div>
+      <div class="navSections">
+        <a href="allflights.html"><div class="navLabels">
+          <i class="material-icons">flight</i>
+          <h2>All flights</h2>
+        </div></a>
+      </div>
+      <hr>
+      <div class="navSections">
+        <div class="navLabels">
+          <i class="material-icons">flight_takeoff</i>
+          <h2>Departures</h2>
+        </div>
+        <div class="navLabels">
+          <i class="material-icons">flight_land</i>
+          <h2>Arrivals</h2>
+        </div>
+        <a href="airports.html"><div class="navLabels">
+          <i class="material-icons">place</i>
+          <h2>Airports</h2>
+        </div></a>
+      </div>
+      <hr>
+      <div class="navSections">
+        <div class="navLabels">
+          <i class="material-icons">history</i>
+          <h2>History</h2>
+        </div>
+        <div class="navLabels">
+          <i class="material-icons">star</i>
+          <h2>Starred</h2>
+        </div>
+      </div>
+      <hr>
+      <div class="navSections">
+        <a href="settings.html"><div class="navLabels">
+          <i class="material-icons">settings</i>
+          <h2>Settings</h2>
+        </div></a>
+        <div class="navLabels">
+          <i class="material-icons">help</i>
+          <h2>Help &amp; feedback</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="scrim" onclick="back()">
+    </div>
+
+      <div id="mapContainer">
+        <div class="searchInput">
+          <i class="material-icons" id="backArrow" onclick="searchClose()">arrow_back</i>
+          <input id="pac-input" type="text" placeholder="Search Box">
+          <i class="material-icons" id="close" onclick="clearContents()">close</i>
+        </div>
+        <div class="appBar mapBar">
+          <div id="appBarMenuIcon">
+            <i class="material-icons" onclick="navDrawer()">menu</i>
+            <h1>Flights</h1>
+          </div>
+          <div id="appBarActions">
+            <i class="material-icons" id="search" onclick="search()">search</i>
+            <i class="material-icons appBarMic">mic</i>
+          </div>
+        </div>
+        <div id="map">
+        </div>
+        <div class="FAB" id="FABcenter">
+          <i class="material-icons">my_location</i>
+        </div>
+        <div class="FAB" id="FABflights">
+          <i class="material-icons">flight_takeoff</i>
+        </div>
+      </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUw2B-mUvN_EatzuMTsj6Cdb8cZ4PqvDM&libraries=places&callback=initAutocomplete" async defer></script>
+
+  </body>
+</html>
